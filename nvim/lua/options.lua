@@ -34,12 +34,18 @@ vim.o.smartcase = true
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
+-- Keep cursor centered
+vim.o.scrolloff = 999
+
 -- Decrease update time
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+-- Turn off line wrap
+vim.wo.wrap = false
 
 -- Tab size
 vim.opt.tabstop = 2

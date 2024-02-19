@@ -17,6 +17,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Nvim-tree Toggle
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
 
+-- Buffer_manager Toggle
+vim.api.nvim_set_keymap('n', '<leader>b', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>', { noremap = true, silent = true })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
