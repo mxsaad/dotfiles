@@ -145,7 +145,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'auto',
+        theme = 'gruvbox_dark',
         component_separators = '|',
         section_separators = '',
       },
