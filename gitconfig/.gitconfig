@@ -1,0 +1,9 @@
+[user]
+	name = Muhammad Saad
+	email = github.5s32y@slmail.me
+[core]
+  editor = nvim
+[init]
+	defaultBranch = main
+[color]
+	ui = auto

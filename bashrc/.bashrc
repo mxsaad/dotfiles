@@ -1,7 +1,6 @@
-# ~/.bash_profile
-
 # terminal colors
 export CLICOLOR=1
+export TERM=xterm-256color
 
 # homebrew
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
@@ -15,10 +14,10 @@ export PATH="~/bin:$PATH"
 # default editor
 export EDITOR="/opt/homebrew/bin/nvim"
 
-# bash auto-completion@2
+# bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-# ~/.bash_aliases
+# aliases
 if [ -e $HOME/.bash_aliases ]; then
 	source $HOME/.bash_aliases
 fi
@@ -29,4 +28,5 @@ eval "$(zoxide init bash)"
 # starship
 eval "$(starship init bash)"
 
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

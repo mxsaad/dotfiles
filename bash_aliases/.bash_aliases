@@ -1,3 +1,8 @@
 alias ls="ls -FNh --color"
 alias less="less -gINS"
 alias cd="z"
+alias vim="nvim"
+alias vi="nvim"
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
