@@ -1,20 +1,8 @@
--- [[ Setting options ]]
--- See `:help vim.o`
--- NOTE: You can change these options as you wish!
-
--- Set highlight on search
-vim.o.hlsearch = false
-
--- Make relative line numbers default
+-- Relative line numbers
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Enable mouse mode
-vim.o.mouse = 'a'
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
+-- Sync clipboard between OS and Neovim
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
@@ -52,10 +40,10 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
--- NOTE: You should make sure your terminal supports this
+-- Enable colors
 vim.o.termguicolors = true
 
 -- Colorscheme
-vim.o.background = "dark" -- or "light" for light mode
+vim.o.background = "dark"
 
 -- vim: ts=2 sts=2 sw=2 et
