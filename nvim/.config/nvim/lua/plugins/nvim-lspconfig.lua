@@ -11,13 +11,15 @@ return {
         require('mason').setup({automatic_installation = true })
         require("mason-lspconfig").setup_handlers({
           function (server_name) -- dynamically setup lspconfig for each server
-              require("lspconfig")[server_name].setup {}
+              require("lspconfig")[server_name].setup({
+                  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+              })
           end,
         })
       end,
     },
-    { "folke/neodev.nvim", opts = {} },
-    { "j-hui/fidget.nvim", opts = {} },
+    "folke/neodev.nvim",
+    "j-hui/fidget.nvim",
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
