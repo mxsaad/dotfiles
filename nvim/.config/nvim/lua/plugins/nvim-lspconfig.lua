@@ -1,22 +1,21 @@
 return {
   'neovim/nvim-lspconfig',
+  event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
-    { 
-      'williamboman/mason.nvim', 
-      config = true
-    },
-    { 
+    { 'williamboman/mason.nvim', config = true },
+    {
       'williamboman/mason-lspconfig.nvim',
-      config = function()
-        require('mason').setup({automatic_installation = true })
-        require("mason-lspconfig").setup_handlers({
-          function (server_name) -- dynamically setup lspconfig for each server
-              require("lspconfig")[server_name].setup({
-                  capabilities = require('cmp_nvim_lsp').default_capabilities(),
-              })
+      opts = {
+        ensure_installed = { 'lua_ls', 'tsserver', 'jsonls', 'html', 'cssls', 'bashls', 'pyright', 'tailwindcss', 'svelte' },
+        automatic_installation = true,
+        handlers = {
+          function(server_name) -- dynamically setup servers
+            require("lspconfig")[server_name].setup({
+              capabilities = require('cmp_nvim_lsp').default_capabilities(),
+            })
           end,
-        })
-      end,
+        },
+      }
     },
     "folke/neodev.nvim",
     "j-hui/fidget.nvim",
@@ -27,7 +26,7 @@ return {
       callback = function(ev)
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-    
+
         -- Buffer local mappings.
         local opts = { buffer = ev.buf }
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Go to [D]eclaration' })
@@ -44,9 +43,9 @@ return {
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'Buffer [r]ename' })
         vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'List [c]ode [a]ctions' })
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'List [r]eferences' })
-        vim.keymap.set('n', '<leader>F', function()
+        vim.keymap.set('n', '<leader>f', function()
           vim.lsp.buf.format { async = true }
-        end, { desc = 'Format [F]ile' })
+        end, { desc = 'Format [f]ile' })
       end,
     })
   end,
