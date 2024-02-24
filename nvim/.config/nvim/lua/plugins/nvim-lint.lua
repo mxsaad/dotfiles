@@ -1,8 +1,7 @@
 return {
 	"mfussenegger/nvim-lint",
-	event = "LazyFile",
+	events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 	opts = {
-		events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 		linters_by_ft = {
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
@@ -12,4 +11,12 @@ return {
 			python = { "pylint" },
 		},
 	},
+	config = function()
+		vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
+			group = vim.api.nvim_create_augroup("lint", { clear = true }),
+			callback = function()
+				require("lint").try_lint()
+			end,
+		})
+	end,
 }

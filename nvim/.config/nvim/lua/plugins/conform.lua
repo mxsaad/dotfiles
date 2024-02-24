@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	event = "LazyFile",
+	events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 	cmd = { "ConformInfo" },
 	opts = {
 		formatters_by_ft = {
