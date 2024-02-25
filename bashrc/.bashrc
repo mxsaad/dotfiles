@@ -39,3 +39,5 @@ export NVM_DIR="$HOME/.nvm"
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# pokeget
+command -v pokeget > /dev/null && pokeget random --hide-name
