@@ -46,4 +46,22 @@ vim.o.termguicolors = true
 -- Colorscheme
 vim.o.background = "dark"
 
+-- SignColumn highlight
+vim.cmd [[ hi SignColumn guibg=NONE ]]
+
+-- Custom diagnostic signs
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticVirtualTextError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticVirtualTextWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticVirtualTextInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticVirtualTextHint' })
+
+-- Custom trouble.nvim signs and highlights
+vim.cmd [[ hi link TroubleSignError DiagnosticVirtualTextError ]]
+vim.cmd [[ hi link TroubleSignWarning DiagnosticVirtualTextWarn ]]
+vim.cmd [[ hi link TroubleSignInfo DiagnosticVirtualTextInfo ]]
+vim.cmd [[ hi link TroubleSignHint DiagnosticVirtualTextHint ]]
+vim.cmd [[ hi TroubleFoldIcon guibg=NONE ]]
+vim.cmd [[ hi TroubleCount guibg=NONE ]]
+vim.cmd [[ hi TroubleText guibg=NONE ]]
+
 -- vim: ts=2 sts=2 sw=2 et

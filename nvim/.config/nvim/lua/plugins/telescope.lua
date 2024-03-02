@@ -9,7 +9,7 @@ return {
   },
   config = function()
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search for [f]iles' })
+    vim.keymap.set('n', '<leader>sf', "<CMD>Telescope find_files hidden=true<CR>", { desc = 'Search for [f]iles' })
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search via [g]rep' })
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search for [b]uffers' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search for [h]elp' })
