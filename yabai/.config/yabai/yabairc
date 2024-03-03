@@ -24,7 +24,7 @@ yabai -m config mouse_action2 resize
 yabai -m mouse_drop_action swap
 
 # JankyBorders
-borders style=round width=6.0 active_color=0xffe78a4e &
+borders style=round width=6.0 active_color=0xffffffff &
 
 # apps to ignore
 yabai -m rule --add app="^System Settings$" manage=off
