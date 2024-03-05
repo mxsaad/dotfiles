@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("oil").setup({
 			skip_confirm_for_simple_edits = true,
-			lsp_rename_autosave = "unmodified",
+			lsp_file_methods = { autosave_changes = true },
 		})
 		vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 	end,

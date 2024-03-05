@@ -2,6 +2,9 @@
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Hide command line (replace with Noice)
+vim.o.cmdheight = 0
+
 -- Sync clipboard between OS and Neovim
 vim.o.clipboard = 'unnamedplus'
 

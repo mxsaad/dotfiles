@@ -65,5 +65,7 @@ return {
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List [r]eferences" })
 			end,
 		})
+
+		vim.keymap.set("n", "<leader>m", "<CMD>Mason<CR>", { desc = "Open [m]ason" })
 	end,
 }
