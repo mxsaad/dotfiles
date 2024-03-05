@@ -10,8 +10,8 @@ $directory\
 $git_branch\
 $git_status\
 [](bg:mauve fg:green)\
-$aws$buf$c$conda$crystal$dart$elixir$elm$fennel$fossil_branch$golang$guix_shell$haskell$haxe$java$julia$kotlin$lua$meson$nim$nix_shell$nodejs$ocaml$perl$php$pijul_channel$python$rlang$ruby$rust$scala$swift$zig\
-[](fg:mauve)\
+$time\
+[](fg:mauve)\
 $line_break\
 $character\
 """
@@ -97,6 +97,12 @@ format = '[ $symbol $branch ]($style)'
 [git_status]
 style = "bg:green fg:base"
 format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:mauve fg:base"
+format = '[  $time ]($style)'
 
 # palette tables should be last in the config ⚓️
 [palettes.catppuccin_macchiato]
