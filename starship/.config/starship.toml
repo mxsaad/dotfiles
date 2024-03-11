@@ -3,24 +3,16 @@
 
 # Format
 format = """
-$os$username[@](fg:base bg:blue)$hostname\
-[](bg:maroon fg:blue)\
-$directory\
-[](bg:green fg:maroon)\
-$git_branch\
-$git_status\
-[](bg:mauve fg:green)\
-$time\
-[](fg:mauve)\
-$line_break\
-$character\
+$os$username$hostname \
+$directory \
+$git_branch$git_status \
+$line_break$character\
 """
 
 # Sets user-defined palette
 palette = "catppuccin_macchiato"
 
 [character]
-# Note the use of Catppuccin color 'maroon'
 success_symbol = "[󰞇](green)"
 error_symbol = "[󰞇](red)"
 vimcmd_symbol = "[󰞇](green)"
@@ -28,7 +20,7 @@ vimcmd_symbol = "[󰞇](green)"
 [os]
 disabled = false
 style = "bg:blue fg:base"
-format = '[ $symbol]($style)'
+format = '[](fg:blue)[$symbol]($style)'
 
 [os.symbols]
 Alpaquita = " "
@@ -81,28 +73,28 @@ format = '[$user]($style)'
 ssh_only = false
 ssh_symbol = ""
 style = "bg:blue fg:base"
-format = '[$hostname ]($style)'
+format = '[@$hostname]($style)[](fg:blue)'
 
 [directory]
-style = "fg:base bg:maroon"
-format = "[  $path ]($style)"
+style = "fg:base bg:pink"
+format = "[](fg:pink)[ $path]($style)[](fg:pink)"
 truncation_length = 2
 truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
 style = "bg:green fg:base"
-format = '[ $symbol $branch ]($style)'
+format = '[](fg:green)[$symbol $branch]($style)'
 
 [git_status]
 style = "bg:green fg:base"
-format = '[$all_status$ahead_behind ]($style)'
+format = '[ $all_status$ahead_behind]($style)[](fg:green)'
 
-[time]
-disabled = false
-time_format = "%H:%M"
-style = "bg:mauve fg:base"
-format = '[  $time ]($style)'
+# [time]
+# disabled = false
+# time_format = "%H:%M"
+# style = "bg:mauve fg:base"
+# format = '[  $time ]($style)'
 
 # palette tables should be last in the config ⚓️
 [palettes.catppuccin_macchiato]
