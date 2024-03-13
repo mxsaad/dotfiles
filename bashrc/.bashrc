@@ -36,8 +36,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# pokeget
+# run pokeget
 command -v pokeget > /dev/null && pokeget random --hide-name
