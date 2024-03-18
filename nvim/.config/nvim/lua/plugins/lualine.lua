@@ -9,24 +9,22 @@ return {
 				section_separators = { left = "", right = "" },
 			},
 			sections = {
-				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-				lualine_b = { "branch", "diff" },
+				lualine_a = { "mode" },
+				lualine_b = { { "branch", icon = "" }, "diff" },
 				lualine_c = {},
 				lualine_x = {
 					{
-						require("noice").api.statusline.mode.get,
-						cond = require("noice").api.statusline.mode.has,
-						color = { fg = "#ff9e64" },
+						"diagnostics",
+						sources = { "nvim_lsp" },
+						symbols = { error = " ", warn = " ", info = " " },
 					},
 				},
 				lualine_y = { "progress", "location" },
-				lualine_z = {
-					{ "filename", separator = { right = "" }, left_padding = 2 },
-				},
+				lualine_z = { "filename" },
 			},
 			inactive_sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff" },
+				lualine_b = { { "branch", icon = "" }, "diff" },
 				lualine_c = {},
 				lualine_x = {},
 				lualine_y = {},
