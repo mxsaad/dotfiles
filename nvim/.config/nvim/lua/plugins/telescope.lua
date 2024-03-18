@@ -13,6 +13,8 @@ return {
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search via [g]rep' })
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search for [b]uffers' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search for [h]elp' })
+    vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search for [k]eymaps' })
+    vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = 'Search for [c]ommands' })
 
     require('telescope').load_extension('fzf')
     require("telescope").load_extension("ui-select")
