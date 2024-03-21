@@ -44,4 +44,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # run pokeget
-command -v pokeget > /dev/null && pokeget random --hide-name
+command -v pokeget > /dev/null && pokeget random random random --hide-name
