@@ -12,7 +12,7 @@ export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="~/bin:$PATH"
 
 # default editor
-export EDITOR=$(which nvim)
+export EDITOR="nvim"
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
