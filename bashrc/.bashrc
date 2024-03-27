@@ -12,7 +12,7 @@ export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="~/bin:$PATH"
 
 # default editor
-export EDITOR="/opt/homebrew/bin/nvim"
+export EDITOR=$(which nvim)
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
@@ -44,4 +44,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # run pokeget
-command -v pokeget > /dev/null && pokeget random random random --hide-name
+command -v pokeget > /dev/null && pokeget random --hide-name
