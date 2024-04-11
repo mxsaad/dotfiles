@@ -16,7 +16,7 @@ return {
 			markdown = { "prettier" },
 			graphql = { "prettier" },
 			lua = { "stylua" },
-			python = { "isort", "black" },
+			python = { "ruff" },
 		},
 	},
 	format_on_save = {

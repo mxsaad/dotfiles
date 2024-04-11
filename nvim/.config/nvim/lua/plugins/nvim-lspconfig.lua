@@ -1,11 +1,15 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "williamboman/mason.nvim", config = true },
+		{
+			"williamboman/mason.nvim",
+			config = true,
+			keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Open [m]ason" } },
+		},
 		{
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			opts = {
-				ensure_installed = { "stylua", "eslint_d", "prettier", "isort", "black", "pylint" },
+				ensure_installed = { "stylua", "eslint_d", "prettier", "ruff" },
 			},
 		},
 		{
@@ -43,7 +47,6 @@ return {
 				vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 				-- Buffer local mappings.
-				local opts = { buffer = ev.buf }
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to [D]eclaration" })
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to [d]efinition" })
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show [K]eyword Popup" })
@@ -65,7 +68,5 @@ return {
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List [r]eferences" })
 			end,
 		})
-
-		vim.keymap.set("n", "<leader>m", "<CMD>Mason<CR>", { desc = "Open [m]ason" })
 	end,
 }

@@ -8,7 +8,7 @@ return {
 			typescriptreact = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
-			python = { "pylint" },
+			python = { "ruff" },
 		},
 	},
 	config = function()
