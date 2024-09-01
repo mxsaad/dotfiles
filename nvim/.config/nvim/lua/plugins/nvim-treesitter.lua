@@ -23,4 +23,3 @@ return {
 		highlight = { enable = true },
 	},
 }
-
