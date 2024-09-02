@@ -3,7 +3,9 @@ return {
 	lazy = false,
 	dependencies = {
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		opts = { enable_autocmd = false },
+		config = function()
+			require("ts_context_commentstring").setup({ enable_autocmd = false })
+		end,
 	},
 	config = function()
 		require("Comment").setup({
