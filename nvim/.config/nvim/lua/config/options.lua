@@ -46,9 +46,5 @@ vim.opt.expandtab = true
 -- Enable colors
 vim.o.termguicolors = true
 
--- Colorscheme
-vim.o.background = "dark"
-vim.cmd.colorscheme "catppuccin-mocha"
-
 -- vim: ts=2 sts=2 sw=2 et
 
