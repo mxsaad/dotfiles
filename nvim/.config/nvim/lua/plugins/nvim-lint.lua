@@ -2,7 +2,7 @@ return {
 	"mfussenegger/nvim-lint",
 	events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 	config = function()
-    require("lint").linters_by_ft = {
+		require("lint").linters_by_ft = {
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
 			typescriptreact = { "eslint_d" },

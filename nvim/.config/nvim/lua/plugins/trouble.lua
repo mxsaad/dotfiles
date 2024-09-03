@@ -2,7 +2,7 @@ return {
 	"folke/trouble.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = true,
-  cmd = "Trouble",
+	cmd = "Trouble",
 	keys = {
 		{ "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Toggle diagnostics" },
 		{ "<leader>xb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Toggle [b]uffer diagnostics" },

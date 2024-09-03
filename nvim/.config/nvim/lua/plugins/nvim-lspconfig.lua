@@ -46,16 +46,16 @@ return {
 				-- Enable completion triggered by <c-x><c-o>
 				vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
-        local bufopts = function(description)
-          return { buffer = ev.buf, desc = description }
-        end
+				local bufopts = function(description)
+					return { buffer = ev.buf, desc = description }
+				end
 
 				-- Buffer local mappings.
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts("Go to [D]eclaration"))
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts("Go to [d]efinition"))
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts("Show [K]eyword Popup"))
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts("Go to [i]mplementation"))
-				vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts("Show signature help" ))
+				vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts("Show signature help"))
 				vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts("Workspace [a]dd folder"))
 				vim.keymap.set(
 					"n",
