@@ -29,6 +29,11 @@ return {
 				automatic_installation = true,
 				handlers = {
 					function(server_name) -- dynamically setup servers
+						-- https://github.com/neovim/nvim-lspconfig/pull/3232
+						if server_name == "tsserver" then
+							server_name = "ts_ls"
+						end
+
 						require("lspconfig")[server_name].setup({
 							capabilities = require("cmp_nvim_lsp").default_capabilities(),
 						})
