@@ -5,7 +5,7 @@ alias ls="ls -FNh --color"
 alias less="less -gINS"
 
 # Use `z` for navigation if available
-if command -v z &> /dev/null; then
+if command -v zoxide &> /dev/null; then
     alias cd="z"
 fi
 
