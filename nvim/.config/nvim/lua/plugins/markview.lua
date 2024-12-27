@@ -5,4 +5,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"nvim-tree/nvim-web-devicons",
 	},
+	opts = {
+		filetypes = { "markdown", "quarto", "rmd", "copilot-chat" },
+	},
 }
