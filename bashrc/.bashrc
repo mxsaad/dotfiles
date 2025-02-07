@@ -46,5 +46,8 @@ export GOPATH=$HOME/go
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# postgresql
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
 # run pokeget
 command -v pokeget > /dev/null && pokeget random --hide-name
