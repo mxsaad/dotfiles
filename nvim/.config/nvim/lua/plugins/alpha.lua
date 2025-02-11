@@ -26,8 +26,8 @@ return {
 
 		dashboard.section.buttons.val = {
 			dashboard.button("n", " new", "<CMD>enew<CR>"),
-			dashboard.button("f", " files", "<CMD>Telescope find_files hidden=true<CR>"),
-			dashboard.button("g", " grep", "<CMD>Telescope live_grep<CR>"),
+			dashboard.button("<leader>sf", " files", "<CMD>Telescope find_files hidden=true<CR>"),
+			dashboard.button("<leader>sg", " grep", "<CMD>Telescope live_grep<CR>"),
 			dashboard.button("q", "󰗼 quit", "<CMD>q<CR>"),
 		}
 
