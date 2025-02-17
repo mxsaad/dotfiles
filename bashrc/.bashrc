@@ -22,12 +22,6 @@ if [ -e $HOME/.bash_aliases ]; then
 	source $HOME/.bash_aliases
 fi
 
-# zoxide
-eval "$(zoxide init bash)"
-
-# starship
-eval "$(starship init bash)"
-
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -48,6 +42,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # postgresql
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+# zoxide
+eval "$(zoxide init bash)"
+
+# starship
+eval "$(starship init bash)"
 
 # run pokeget
 command -v pokeget > /dev/null && pokeget random --hide-name
