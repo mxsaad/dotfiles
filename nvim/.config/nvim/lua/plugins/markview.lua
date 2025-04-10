@@ -6,6 +6,10 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
-		filetypes = { "markdown", "quarto", "rmd", "copilot-chat" },
+		{
+			preview = {
+				filetypes = { "markdown", "quarto", "rmd", "copilot-chat", "codecompanion" },
+			},
+		},
 	},
 }
