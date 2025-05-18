@@ -43,11 +43,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # postgresql
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
-# zoxide
-eval "$(zoxide init bash)"
-
 # starship
 eval "$(starship init bash)"
 
 # run pokeget
 command -v pokeget > /dev/null && pokeget random --hide-name
+
+# zoxide
+eval "$(zoxide init bash)"
+
