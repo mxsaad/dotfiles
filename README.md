@@ -8,7 +8,7 @@ To deploy these dotfiles on your system:
 
 1. Clone this repository to your home directory:
    ```bash
-   git clone https://github.com/mxsaad/dotfiles.git ~/dotfiles
+   git clone https://github.com/codebedouin/dotfiles.git ~/dotfiles
    ```
 
 2. Navigate to the cloned repository:
@@ -18,7 +18,7 @@ To deploy these dotfiles on your system:
 
 3. Use GNU Stow to symlink the desired configurations. For example, to symlink the Bash and Vim configurations:
    ```bash
-   stow bash vim
+   stow bashrc nvim
    ```
 
    Replace `bash` and `vim` with the names of the directories containing configurations you want to deploy.
